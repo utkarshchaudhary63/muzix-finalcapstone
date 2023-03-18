@@ -1,0 +1,70 @@
+<!-- ================================================================================== --> 
+<div  id="div"> 
+    <div  class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg></label>
+        <div class="content">
+        <div class="logo">  <img id="home" src="../../assets/Image20230215131915.png" alt=""></div>
+          <ul class="links">
+            <li><span>
+              <img [src]="profileImage" width="50px" height="50px" style="border-radius: 50%;" id="pho">&nbsp;</span></li>
+              <li >
+                <a  class="desktop-link name-search">Hi {{name}}</a>
+
+<button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+                <input type="checkbox" id="show-features">
+                <label for="show-features">Hi {{name}}</label>
+                <ul>
+                  <li><a routerLink="/profile"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                  </svg>Profile</a></li>
+                  <li><a routerLink="/contact"> <mat-icon>phone_in_talk</mat-icon> Contact Us</a></li>
+                  <li><a (click)="logout()" class="l1"><mat-icon>logout</mat-icon>Logout</a></li>
+                </ul>
+              </li>
+              
+              <div> 
+              <span id="play" *ngIf="amount==149; else gold">
+                <img src="../../assets/subscription/silver.jpg" alt="silver STAR"  width="42px" height="42px">
+              </span>
+
+              <ng-template #gold>
+                <span *ngIf="amount==199; else plat"> 
+                <img src="../../assets/subscription/gold1.jpg" alt="" width="42px" height="38px">
+              </span>
+            </ng-template>  
+              <ng-template #plat>
+                <span *ngIf="amount==299"> 
+                <img src="../../assets/subscription/platinum.jpg" alt="" width="42px" height="38px">
+                </span>
+              </ng-template>  
+            </div>
+
+            <li><a routerLink="/dashboard">Home</a></li>
+            <li><a routerLink="/fav"class="home">FavList</a></li>
+            <li><a routerLink="/Recommended"  class="home">Recommended</a></li>
+            <li><a routerLink="/sub"  class="home">Subscription</a></li>
+      
+          </ul>
+        </div>
+        <span style="margin-left: 250px;"  id="searchIcon" (click)="onSearchTextChanged()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg></span>
+
+      
+      </nav>
+    </div>
+
+
+    <ng-template>   
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+
+       
+        </ng-template>
+      </div>

@@ -1,0 +1,414 @@
+.material-icons{font-family: 'Material Icons' !important;}
+.mat-i{
+  margin-left: -2px;
+}
+mat-icon
+{margin-left:2px; color: #f1f1f1;}
+
+ #drop,#a1{background-color: white; color:violet
+ }
+  /* ========================================================================== */
+  *{
+    font-size: 20px;
+    background-color: black;
+}
+  section,button>div{
+     background-color: #000;
+  }
+  #year{
+    margin-left: 1100px;
+    margin-top: -40px;
+  }
+  body
+  {
+    background-image: url(../../assets/Image20230215131434.png);
+    background-size: cover;
+  }
+  #a1{
+    margin-left: 60%;
+    padding-right: 3px/4; 
+      position: relative;
+      margin-left: -1px;
+      color: aliceblue;
+      font-size: 17px;  
+  }
+  a:hover{
+    color: black;
+    background-color:red;
+    color: white;
+   border: 2px solid red;
+   border-radius: 4px;
+   padding: 38px/4;
+  }
+  #div{
+      height: 5%;
+      width: 100%;
+      background-color: transparent;
+      padding-top: 15px;
+  }
+  a{
+    margin-left: 25px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .mat-toolbar{ 
+  width: 100%;
+  height: 45px;
+  }
+  img{ margin-left: 5cm/4; }
+
+  #profile{
+    margin-left: 19%;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    padding-right: 20px;
+}
+input{
+    background: transparent;
+    border: none;color: azure;
+    font-size: 20px;
+    width: 20%;
+    justify-content: center;
+
+}
+
+ul li {
+    margin-left: 71%;
+    list-style-type: none;
+    line-height: 45px;
+  cursor: pointer;
+    width: 7.5%;
+    color: whitesmoke;
+    font-size: 17px;
+    background: transparent;
+   overflow: hidden;
+
+}
+
+#menu{ font-size: 10px;
+}
+#pho{
+margin-left: 50px;
+}
+
+#a1:hover{
+    color: plum;
+    border: none;
+}
+/* -------------------------------------- */
+
+.main{ 
+    height: 350px;
+    background-size: cover;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+min-height: 40%;
+}
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.back-video
+{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.movies{
+    padding: 20px 0px;
+    margin-top: 0px;
+}
+.slider-wrap{
+    position: relative;
+     overflow: hidden;
+     overflow-inline:hidden;
+     height: 270px;;
+}
+.slider-main{
+    position: absolute;
+    width: 1080%;
+}
+.movie{
+    display: inline-block;
+    width: 195px;
+    height: 180px;
+    position: relative;
+    margin: 0px 12px;
+    margin-left: 4%;
+    margin-bottom: 5%;
+}
+
+hr{
+height:26px;
+background-color: white;
+}
+.heading{
+    margin-top: -50px;
+}
+mat-raised-button{
+    background-color: transparent;
+}
+#image{
+width: 230px;
+height: 230px;
+border-radius: 7px;
+
+}
+#image:hover{
+    transform: scale(1.5);
+    border-radius: 5px;
+    height: 500px;
+}
+
+.card{
+    transition: 0.5s ease-in-out;
+    height:250px ;
+    width: 100%;
+    overflow: hidden;
+}
+
+h1{
+  background: transparent;
+  font-weight: 600;
+}
+
+.card:hover .info{ opacity: 1;  transform: translateY(0px);}
+.card .info h1{ margin: 0; }
+.card .info p
+{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.card .info .btn
+{
+    text-decoration: none ;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    columns:pink;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+  .card:hover{
+    height: 300px;
+    transform: translateZ(20px);  
+  }
+
+  .card-text{
+    text-transform: capitalize;
+    position:relative;
+    line-height: -8px;
+    backdrop-filter:blur(5px);
+    background: transparent; 
+    
+  }
+  .card-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .card-info{
+    font-size: 16px;
+    line-height: 25px;
+    padding:10px 20px;
+    outline: none;
+    font-weight: 500;
+    background:transparent;
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  #content
+  {
+    padding-top: 400px;
+  }
+  h4{
+    background: transparent;
+  }
+  button{
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+  
+ #play{
+    color: blue;
+  }
+  mat-icon,span{
+    background: transparent;
+  }
+  .card-text {
+    position: absolute;
+    text-transform: capitalize;
+    position:absolute;
+    backdrop-filter:blur(5px);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.2);
+  }
+  .card:hover{
+    border: 3px solid rgb(227, 98, 227);
+    box-shadow: 5px 3px 3px 5px rgb(175, 56, 175);
+  }
+  .card:hover .card-text {
+    transform: translateY(0);
+  }
+  
+  #playTrailor{
+
+    padding-top:40px;
+  }
+  #tags{
+    width: 80%;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+  }
+
+  .tag{
+    color: white;
+    background-color:orange;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 3px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .tag2{
+    color: black;
+    background-color:plum;
+    padding: 8px 8px 3px 0px;
+    border-radius: 50px;
+    margin: 3px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .tag3{
+    color: rgb(35, 12, 12);
+    font-weight: 500;
+    background-color: lightcoral;
+    padding: 10px 10px;
+    border-radius: 50px;
+    margin: 3px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .tag4{ color: rgb(17, 17, 80);
+    font-weight: 500; background-color: lightskyblue;padding: 10px 10px;
+    border-radius: 50px;
+    margin: 3px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  mat-icon{
+    margin-left:2px;
+    color: #f1f1f1;color:red;
+    margin-left: 30px;
+    background: transparent;
+    color: purple;
+    cursor:pointer
+  }
+  label{
+    margin-left: 5%;
+  }
+
+  select,option{
+    color: plum;
+    font-size: 15px;
+  }
+.mat{
+  background-color: rgb(234, 118, 138);
+margin-left: 10px;
+}
+.example-button-container{
+  text-align: center;
+}
+.a1{
+color: blueviolet;
+background-color: white;
+font-size: 18px;
+cursor: pointer;
+}
+
+.a1:hover{
+  background-color: white;
+  color:blue;
+  border: none;
+}
+
+#l1{
+  cursor: pointer;
+}
+/* ------------------------------------------------ */
+
+.home
+{
+color: white;
+background-color: #000;
+margin-left: 18px;
+padding-bottom: 2px;
+font-family:Arial, Helvetica, sans-serif;
+text-decoration: none;
+font-size: 16px;
+}
+
+.home:hover{
+  color: red;
+  background-color: #000;
+  border: none;
+}
+#arrow{
+  margin-left: -10px;
+}
+
+
+
+a:hover{
+  font-size: large;
+  cursor: pointer;
+}

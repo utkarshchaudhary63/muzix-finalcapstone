@@ -1,0 +1,149 @@
+body{
+
+  background-image: url(../../assets/Image20230215131558.png);
+ opacity: 2;
+  background-size: cover;
+
+ 
+  
+}
+
+#gif{
+position: relative;
+margin-top: -37%;
+margin-left: 65%;
+
+}
+
+mat-icon
+{
+  margin-left: 8px;
+}
+
+  label{
+    display: block;
+    padding: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+   
+    font-size: 12px;
+    font-weight: 500;
+    color:white;
+    cursor: pointer;
+    padding-left: -70%;
+  }
+  
+  label span{
+    flex: 1;
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  input[type="radio"]:checked + span{
+    color: #ff004f;
+  }
+  
+  input[type="text"],input[type="email"]{
+    width: 100%;
+    background: transparent;
+    padding: 7px 10px;
+    outline: none;
+    border: 1px solid #333;
+    margin: 12px 0;
+  }
+  
+  form button{
+    background: red;
+    color: #fff;
+    font-size: 19px;
+    padding: 12px 50px;
+    margin: 20px 0;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+
+  }
+  
+  form button:hover{
+    transform: translateY(-5px);
+  }
+  
+  #email{
+margin-left: -62%;
+  }
+
+  input{
+    width: 15%;
+  }
+  I{
+    color: white
+    
+  }
+ 
+  h3{
+    font-style: italic;
+  }
+
+  button{
+background-color: greenyellow;
+color: white;
+font-size: 30%;
+font-size: 19px;
+padding: 5px 50px 1px 50px;
+border-radius: 5px;
+  }
+
+   #Gold{
+    padding:5px 34px 1px;
+    background-color: goldenrod;
+    box-shadow: 6px solid gold
+  } 
+  #Platinum{
+    padding:5px 31px 2px  ;
+    background-color: rgb(57, 55, 158);
+    
+  }
+  #Silver{
+    background-color: silver;
+    color: black;
+  } 
+
+  #sub{
+    padding:15px   ;
+    background-color: red;
+color: white;
+font-size: 30%;
+font-size: 19px;
+border-radius: 30px;
+padding: 5px 30px 1px 30px;
+border-radius: 5px;
+  }
+  
+  #unsub{
+    background-color: rgba(240, 255, 240, 0.297);
+    color: black;
+    font-size: xx-larger;
+
+    margin-left: 70px;padding: 5px 30px 1px 30px;
+    cursor: pointer;
+    padding:8px 
+  }
+
+  #unsub:hover{
+    background-color: rgba(240, 255, 240, 0.297);
+    color: white;
+    font-size: 20px;
+    margin-left: 70px;
+    cursor: pointer;
+    padding:8px 
+  }
+  #main{
+    padding-top: 4%;
+    padding-left: 30%;
+  }

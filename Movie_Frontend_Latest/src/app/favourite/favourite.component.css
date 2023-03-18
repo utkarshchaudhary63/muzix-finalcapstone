@@ -1,0 +1,306 @@
+#detail{
+    background:linear-gradient(to bottom,plum ,red,rgb(152, 58, 152)) ;
+    
+    padding-top: 10px;
+    
+}
+h1{
+  text-align: center;
+  color: blue;
+  font-weight: 300;
+font-size: xx-large;
+}
+h2{
+    padding-left: 12px;
+}
+#playTrailor{
+    margin-top: 2.5%;
+}
+#release{
+    padding-bottom: 7px;
+}
+/* ============================================================================== */
+
+#header{
+  position: sticky;
+  margin-top: 0%;
+}
+#main{ 
+  
+    height: 350px;
+    background-size: cover;
+  margin-top: 60%;
+    
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+min-height: 40%;
+
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.back-video{
+
+  z-index: -1;
+  position: relative;
+
+  padding-top:40px;
+}
+
+.movies{
+    padding: 20px 0px;
+    margin-top: 0px;
+}
+.slider-wrap{
+    position: relative;
+     overflow: hidden;
+     overflow-inline:hidden;
+     height: 270px;;
+}
+.slider-main{
+    position: absolute;
+    width: 1080%;
+}
+.movie{
+    display: inline-block;
+    width: 195px;
+    height: 180px;
+    position: relative;
+    margin: 0px 12px;
+    margin-top: 5%;
+}
+
+.prev{
+    position: absolute;
+    left: 36px;
+    top: 120px;
+    transform: translate(-50%,-50%);
+}
+.next{
+    position: absolute;
+    right: -5px;
+    top: 120px;
+    transform: translate(-50%,-50%);
+}
+.heading{
+    margin-top: -50px;
+}
+mat-raised-button{
+    background-color: transparent;
+}
+#image{
+width: 230px;
+height: 230px;
+border-radius: 7px;
+
+}
+#image:hover{
+    transform: scale(1.5);
+    border-radius: 5px;
+    height: 500px;
+}
+
+.card{
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    transform: translateZ(20px);
+   
+    border: 3px solid rgb(227, 98, 227);
+    box-shadow: 3px 3px 3px 3px rgb(175, 56, 175);
+  
+}
+
+.card-text{
+  line-height: -8px;
+}
+h2{
+  background: transparent;
+  
+  font-weight: 600;
+}
+
+.card .info
+{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+   
+}
+
+
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info h1{
+
+    margin: 0;
+   
+}
+#playTrailor{
+  z-index: -1;
+
+}
+
+.card .info p
+{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.card .info .btn
+{
+    text-decoration: none ;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    columns:pink;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+
+.card {
+  
+ height:250px ;
+width: 100%;
+overflow: hidden;
+  }
+
+  .card:hover{
+    height: 300px;
+  }
+
+  .card-text{
+    text-transform: capitalize;
+    position:relative;
+    backdrop-filter:blur(5px);
+    background: transparent; 
+    
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .card-info{
+    font-size: 16px;
+    line-height: 25px;
+    padding:10px 20px;
+    outline: none;
+    font-weight: 500;
+    background:transparent;
+   
+
+  }
+
+
+
+  #content
+  {
+    padding-top: 400px;
+  }
+  .back-video
+  {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  h4{
+    background: transparent;
+    
+  }
+  button{
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+  
+  mat-icon
+  {
+    color:red;
+    margin-left: 30px;
+    background: transparent;
+
+  }
+
+ #play{
+    color: blue;
+    cursor: pointer;
+   
+    
+  }
+  .card-text {
+    position: absolute;
+    text-transform: capitalize;
+    position:absolute;
+    backdrop-filter:blur(5px);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.2);
+  }
+  
+  .card:hover .card-text {
+    transform: translateY(0);
+  }
+  
+  #playTrailor{
+
+    padding-top:40px;
+  }
+  .mat{
+    background-color: rgb(234, 118, 138);
+margin-left: 10px;
+  }
+  .mat-i{
+    color:black;
+margin: auto;
+  }
+  .example-button-container{
+    text-align: center;
+    
+  }

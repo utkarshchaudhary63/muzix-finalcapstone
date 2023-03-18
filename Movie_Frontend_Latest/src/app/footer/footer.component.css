@@ -1,0 +1,32 @@
+img{
+    margin: auto;
+    size: 100px;
+    
+}
+div{
+    background-color: black;
+    text-align: center;
+}
+a{
+    color: #777;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-left: 15px;}
+h3{
+    color: white;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+mat-icon{
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+*{
+    background-color: black;
+    margin-top: -16px;
+    
+}
+d1{
+    width: 1005;
+}

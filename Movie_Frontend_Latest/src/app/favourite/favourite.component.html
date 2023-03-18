@@ -1,0 +1,26 @@
+
+<div id="header">
+  <app-header></app-header>
+</div>
+
+<div class="movie" *ngFor="let data of favmovies" >      
+    <div id="main"> 
+    <div class="card" >
+      <img *ngIf="data.poster_path!=null;else defaultImage" src="https://image.tmdb.org/t/p/w500/{{data.poster_path}}" alt="Your image" class="card-image">
+      <ng-template #defaultImage >
+      <img src="../../assets/defa.jpg
+      " alt="" height="320px">
+      </ng-template>
+      <div class="card-text">
+      <h1>{{data. title}}</h1>
+        <h4 class="card-info">{{data. vote_average}}<mat-icon  style="color: crimson;">
+          star_rate
+          </mat-icon></h4>
+        <p class="card-info">{{data.original_language}}</p>
+        <mat-icon routerLink="../play/{{data.id}}" id="play"> play_circle</mat-icon> 
+        <mat-icon (click)="delete(data.id)" id="play"> delete</mat-icon> 
+      </div>
+    </div>
+  </div>
+  
+  </div>

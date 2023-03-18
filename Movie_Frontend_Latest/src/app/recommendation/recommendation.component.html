@@ -1,0 +1,61 @@
+<div>
+  <app-header></app-header>
+</div>
+
+
+<div id="main">
+    <h1 style="color: rgb(60, 143, 215); font-weight: 400; ">Recommended Movies</h1>
+    <section class="movies">
+        
+      <div class="container-fluid">
+        <div class="slider-wrap">
+          <div class="slider-main ">
+            <div class="movie" *ngFor="let data of allRecommendedMovies" >
+              <div class="card">
+                <img src="https://image.tmdb.org/t/p/w500/{{data.poster_path}}" alt="Your image" class="card-image">
+                <div class="card-text"><h2>{{data.title}}</h2>
+                  <h4 class="card-info"><mat-icon>star_rate</mat-icon>{{data.vote_average}}</h4>
+                  <p class="card-info">{{data.original_language}}</p>
+                  <button
+                  matTooltip="Add to favorite List"
+                  matTooltipClass="example-tooltip-uppercase"
+                  aria-label="Button that shows a red tooltip"
+                  class="example-button">
+                  <mat-icon (click)="addToFavroites(data)">favorite</mat-icon>
+          
+          </button>
+                
+
+   <span id="play" *ngIf="amount>=149; else sub">
+    <button
+    matTooltip="Play Movie"
+    matTooltipClass="example-tooltip-uppercase"
+    aria-label="Button that shows a red tooltip"
+    class="example-button">
+    <mat-icon routerLink="../play/{{data.id}}" id="play"> play_circle</mat-icon>
+
+</button>
+      </span>
+      <ng-template #sub>
+        <mat-icon routerLink="/sub" id="play"> play_circle</mat-icon> 
+      </ng-template> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="button" mat-raised-button class="prev preButton" appPrev><mat-icon>arrow_back_ios</mat-icon></button>
+            
+            <button type="button" mat-raised-button class="next nexButton" appNext><mat-icon>arrow_forward_ios</mat-icon></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="example-button-container" style="margin:auto">
+   
+        <button mat-fab color="accent" class="mat" aria-label="Example icon button with a home icon" [disabled]="currentPg<=1" (click)="decreasePage()"><mat-icon class="mat-i">keyboard_double_arrow_left</mat-icon></button>{{currentPg}}
+        <button mat-fab color="accent"class="mat"  aria-label="Example icon button with a home icon"
+        (click)="increasePage()"><mat-icon class="mat-i">keyboard_double_arrow_right</mat-icon></button>
+        
+      </div>
+</div>

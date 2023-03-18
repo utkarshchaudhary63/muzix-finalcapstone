@@ -1,0 +1,131 @@
+<img src="../../assets/featureImages/" alt="">
+  <img routerLink="/dashboard" src="../../assets/logo12.png">
+  <a routerLink="/dashboard"  class="home" id="h1">Home</a>
+  <a routerLink="/fav" class="home">FavList</a>
+  <a routerLink="/Recommended" class="home">Recommended</a>
+  <a routerLink="/sub" class="home">Subscription</a>
+  <span  id="profile"> 
+
+    <input type="text" placeholder="Search Movie,Genre" [(ngModel)]="searchValue" class="search">
+    <mat-icon (click)="onSearchTextChanged()" class="s1">search</mat-icon>
+    <mat-icon  (click)="reset()">restart_alt</mat-icon>
+    Hi {{name}}
+   
+    <span id="menu">
+      <button class = "menu-class" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon id="arrow">arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" id="drop">
+    
+      <mat-icon class="a1">account_circle</mat-icon><a routerLink="/profile" class="a1">Profile</a>
+      <br>
+    <mat-icon class="a1">contacts</mat-icon><a routerLink="/contact" class="a1">Contact Us</a>
+    <br>
+    <mat-icon (click)="logout()" id="l1" class="a1">logout</mat-icon><span (click)="logout()"id="l1" class="a1">Logout</span> 
+      </mat-menu>
+    </span>
+    <img [src]="profileImage" width="50px" height="50px" style="border-radius: 50%; margin-top: -8px;" id="pho">
+ </span>
+
+<hr>
+<body>
+  
+<!-- --------------------buttons--------------------------- -->
+<section>
+<button id="tags">
+<div >
+  <div (click)="byAction()" class="tag">Action</div>
+  <div (click)="byRomance()" class="tag">Romance</div>
+  <div (click)="byComedy()" class="tag">Comedy</div>
+  <div (click)="byThriller()" class="tag">Thriller</div>
+  <div (click)="byHorror()" class="tag">Horror</div>
+</div>
+<div>
+  
+   <div (click)="byEnglish()" class="tag3">Hollywood</div>
+    <div (click)="byHindi()" class="tag3">Bollywood</div>
+    <div (click)="byJapan()" class="tag3">邦画</div>
+    <div (click)="byTolly()" class="tag3">TollyWood</div>
+</div>
+
+  
+    <div>
+      <div (click)="above8()" class="tag2"><mat-icon style="color:red">star</mat-icon>Above 8</div>
+      <div (click)="above7()" class="tag2"><mat-icon style="color:red">star</mat-icon>Above 7 </div>
+      <div (click)="above6()" class="tag2"><mat-icon style="color:red">star</mat-icon>Above 6 </div>
+      <div (click)="below6()" class="tag2"><mat-icon style="color:red">star</mat-icon>Below 6 </div>
+      <div (click)="above9()" class="tag2"><mat-icon style="color:red">star</mat-icon>Above 9</div>
+    </div>
+
+    
+      <div >
+        <div (click)="up()" class="tag4">Upcoming</div>
+        <div (click)="latest()" class="tag4">Latest</div>
+        <div (click)="medium()" class="tag4">Medium</div>
+        <div (click)="VeryOld()" class="tag4">VeryOld</div>
+      </div></button>
+    </section>
+<hr>
+
+
+
+
+<!-- --------------------    Search Movies          -------------------------- -->
+
+<div class="movie" *ngFor="let data of searchMovies" >      
+  <div> 
+  <div class="card" >
+    
+    <img *ngIf="data.poster_path!=null;else defaultImage" src="https://image.tmdb.org/t/p/w500/{{data.poster_path}}" alt="Your image" class="card-image">
+    <ng-template #defaultImage >
+      
+    <img src="../../assets/not-found-web-page-glyph-icon-vector-35467430.jpg" alt="" height="320px">
+    </ng-template>
+
+    <div class="card-text">
+      <h1>{{data. title}}</h1>
+      <h4 class="card-info"><mat-icon  style="color: gold">
+        star_rate
+        </mat-icon>{{data.vote_average}}</h4>
+      <p class="card-info">{{data.original_language}}</p>
+      <button
+      matTooltip="Add to favorite List"
+      matTooltipClass="example-tooltip-uppercase"
+      aria-label="Button that shows a red tooltip"
+      class="example-button">
+      <mat-icon (click)="addToFavroites(data)" style="color:red">favorite</mat-icon>
+
+</button>
+
+      <span id="play" *ngIf="amount>=149; else sub">
+       
+        <button
+        matTooltip="Play Movie"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip"
+        class="example-button">
+        <mat-icon routerLink="../play/{{data.id}}" id="play"> play_circle</mat-icon>
+        </button>
+
+          </span>
+          <ng-template #sub>
+            <mat-icon routerLink="/sub" id="play"> play_circle</mat-icon> 
+          </ng-template> 
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="example-button-container" style="margin:auto">
+  <button mat-fab color="accent" class="mat" aria-label="Example icon button with a home icon" [disabled]="currentPg<=1"
+  (click)="decreasePage()">
+
+  <mat-icon class="mat-i">keyboard_double_arrow_left</mat-icon>
+</button>{{currentPg}}
+  <button mat-fab color="accent"class="mat"  aria-label="Example icon button with a home icon"
+  (click)="increasePage()"><mat-icon class="mat-i">keyboard_double_arrow_right</mat-icon></button>
+  
+</div>
+</body>

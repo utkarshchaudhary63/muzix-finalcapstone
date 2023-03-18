@@ -1,0 +1,147 @@
+
+<body>
+    <form [formGroup]="registrationForm" novalidate (ngSubmit)="onSubmit()">
+      
+        <h1><img id="logo" routerLink="../dashboard" src="../../assets/Image20230215131915.png"></h1>
+      
+      <mat-card class="registration-card">
+        <mat-card-header>
+         
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngIf="userform;else addressForm">
+            <h2>Add User</h2>
+            <div class="row" id="pic">
+              <div class="col-3">
+                <div id="uploadInput">
+                  <img id="profilephoto" [src]="url">
+                  <input type="file" id="file" (change)="uploadProfile($event)">
+                 
+                  <label for="file" id="uploadbtn">Choose Photo</label>
+               
+                </div>
+              </div>
+            </div>
+              <br>
+              <div class="row">
+              <div class="col-6 ">
+                <mat-form-field class="full-width">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="firstName" formControlName="firstName" class="c1">
+                  <mat-error *ngIf="registrationForm.controls['firstName'].hasError('required')">
+                    First Name is <strong>required</strong>
+                  </mat-error>
+                  <mat-error *ngIf="registrationForm.controls['firstName'].hasError('minlength')">
+               First Name minimum 2 
+             </mat-error>
+                </mat-form-field>
+              </div>
+              
+              
+    
+              <div class="col-6 " id="last">
+                <mat-form-field class="full-width">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="lastName" formControlName="lastName" class="c1">
+                  <mat-error *ngIf="registrationForm.controls['lastName'].hasError('required')">
+                   Last name is <strong>required</strong>
+                  </mat-error>
+                  <mat-error
+                  *ngIf="registrationForm.get('lastName')?.errors?.['minlength']">
+                 last Name must minimum 2</mat-error>
+            
+            
+                </mat-form-field>
+              </div>
+            </div>
+      
+    
+          
+           
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-label>Mobile Number</mat-label>
+                  <input type="text" matInput placeholder="Mobile No" formControlName="mobileNo">
+                  <mat-error *ngIf="registrationForm.controls['mobileNo'].hasError('required')">
+                    Mobile number is <strong>required</strong>
+                  </mat-error>
+                  <mat-error *ngIf="mobileNo?.errors?.['pattern']">
+                   Enter Valid Mobile Number must be start with 9/8/7/6 and minimum Length 10
+                </mat-error>  
+          
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+    
+     <ng-template #addressForm>
+    
+            <div *ngIf="address">
+              <h2>Extra details</h2>
+              <div class="row">
+                <mat-form-field class="full-width">
+                  <mat-label>Age</mat-label>
+                  <input type="number" matInput placeholder="age" formControlName="age">
+                  <mat-error *ngIf="registrationForm.controls['age'].hasError('required')">
+                    Age is <strong>required</strong>
+                  </mat-error>
+   
+                  <mat-error
+                  *ngIf="registrationForm.get('age')?.errors?.['min']">
+              Age must be above 5 yrs</mat-error>
+            
+                </mat-form-field>
+              </div>
+    
+              <div class="row">
+                <div class="col">
+                  <mat-form-field class="full-width">
+                    <mat-label>gender</mat-label>
+                    <!-- <input type="tel" matInput placeholder="Gender" formControlName="gender"> -->
+    
+                    <mat-select placeholder="Gender" formControlName="gender">
+                      <mat-option *ngFor="let gender of gen" [value]="gender">
+                        {{ gender }}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="registrationForm.controls['gender'].hasError('required')">
+                      gender is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+                <div class="col">
+                  <mat-form-field class="full-width">
+                    <mat-label>State</mat-label>
+                    <mat-select placeholder="State" formControlName="state">
+                      <mat-option *ngFor="let state of states" [value]="state">
+                        {{ state }}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="registrationForm.controls['state'].hasError('required')">
+                      State is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+           
+          </ng-template> 
+         
+        </mat-card-content>
+        <mat-card-actions  id="next" >
+          <button type="button" *ngIf="!userform" mat-raised-button (click)="prevbtn()">Previous</button>
+    
+          <button *ngIf="address" mat-raised-button color="warn" ng-click type="submit"
+            class="bg-success" [disabled]="registrationForm.invalid">Register</button>
+         
+              <button  *ngIf="!address" type="button" mat-raised-button id="nextbtn" (click)="nextForm()">Next</button>
+        
+    
+        </mat-card-actions>
+        
+       
+    
+      </mat-card>
+    </form>
+    </body >

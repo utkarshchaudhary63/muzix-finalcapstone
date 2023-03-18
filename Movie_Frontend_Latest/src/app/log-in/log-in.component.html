@@ -1,0 +1,46 @@
+<body>
+    <div id="logo"><img routerLink="" src="../../assets/Image20230215131915.png" alt=""></div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-14fR/tTtT1TQgNPbGkPnqbRz77lJ90zlLSWEgZuQRDwUNi7nYr3q9Xy5u5RE6Ucf7VUrzARz8qwZbKjZwQhPIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <div class="content">
+   
+    
+         <div class="container">
+            <img routerLink="" src="../../assets/Image20230215131915.png" alt="">
+
+             <div class="heading">LOG IN</div>
+             <form [formGroup]="loginForm" (ngSubmit)="onlogin()">
+                 <div class="card-details">
+                    
+                    <div class="card-box">
+                         <span class="details">Email ID</span>
+                         <input type="email" placeholder="Enter email Id" formControlName="email" class="form-control">
+                        
+                     </div>
+                     <mat-error *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
+                     style="color:red;font-size: small;">Please enter Valid Email id</mat-error>
+                     <br>
+                     
+                     <div class="card-box">
+                         <span class="details">Password</span>
+                         <input type="{{showPassword ? 'text' : 'password'}}" placeholder="Password" formControlName="password" class="form-control">
+                         
+                     </div>
+                   
+                    <div >
+                      
+                     </div>
+                     <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
+                    style="color:red;font-size: small;">Please enter Valid Password</mat-error>
+                    </div>
+                    
+                    <a><span id="check" routerLink="../forgetpassword">Forgot password ? </span></a>
+                 <div class="button">
+                    <button mat-raised-button color="warn" type="submit" [disabled]="!loginForm.valid">Login</button>
+                 </div>
+             </form>
+             <h3> New User ? <a routerLink="/signup">Register First</a></h3>
+         </div>
+      
+     </div>
+  
+ </body>

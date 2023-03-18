@@ -1,0 +1,22 @@
+<div id="card1" class="container">
+    <h1>Who is Watching ?</h1>
+    <div class="row">
+        
+            <mat-card  (click)=navigate(data.firstName) class="col-md-3 mx-auto my-5" *ngFor="let data of Users">
+            <mat-card-header> 
+              <img [src]="data.profilePic" width="120px" height="120px" class="card-img-top" style="border-radius: 50%; margin-top: -8px;" id="photo">
+            </mat-card-header>
+                    <mat-card-content>
+                        <mat-card-subtitle>
+                          <br>
+                          <h2>{{data.firstName}}&nbsp;{{data.lastName}}</h2>   
+                        
+                        <div>
+                         
+                        </div>
+                        </mat-card-subtitle>
+                    </mat-card-content>
+            </mat-card>
+        </div>
+       
+    </div>

@@ -1,0 +1,283 @@
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header_logo {
+    color: #eeee;
+    font-weight: 600;
+}
+
+
+
+
+
+h3{
+    padding-left: 55px;
+}
+
+
+.content {
+  
+    color: #fff;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    padding-top: 22px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+ 
+    background-size: cover;
+    height: 100%; 
+    
+}
+
+.content div {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.container
+{
+padding-top: 2px;
+    width: 30%;
+    padding: 25px 30px;
+    border-radius: 25px;
+    background: #1b1b1b;
+    margin-left: 49%;
+    margin-bottom: 100px;
+    box-shadow: 3px 3px 3px 3px white;
+   
+    
+}
+
+.container .heading
+{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 0 20px 150px;
+    color: beige;
+    font-family: 300;
+    
+}
+
+.container form .card-details
+{
+    margin-top: 5px;
+  
+    
+}
+
+.mb-3 > img
+{
+    border-radius: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    margin-left: 250px;
+}
+
+.icon
+{
+    margin-top: 100px;
+}
+
+
+.card-details .card-box .details{
+    
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -23px;
+}
+
+.card-details .card-box input
+{
+    height: 45px;
+    width: 320px;
+    margin-top:5px ;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    color: #ccc;
+    background-color: #1b1b1b;
+
+}
+
+.card-details .card-box input:focus,
+.card-details .card-box input:valid{
+    border-color: #9b59b6;
+}
+
+form .circal-form .circal-title{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid;
+}
+
+form .circal-form .category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form .button
+{
+    text-align: center;
+}
+
+form .button input
+{
+    padding: 10px 0;
+    margin-top: 10px;
+    height: 100%;
+    width: 50%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: red;
+}
+
+form .button input:hover
+{
+    background: red;
+}
+.mb-2{
+    padding-left: 150px;
+}
+
+
+.details
+{
+    font-size: 15px;
+}
+
+#check{
+color: #9b59b6;
+font-size: medium;
+cursor: pointer;
+
+}
+.card-box{
+    margin-top: 15px;
+}
+.heading{
+    margin-left:-25px;
+}
+#logo{
+margin-left:20px;
+padding-top: 20px;
+}
+body{
+    background-image: url(../../assets/signuplogin/istockphoto-1191001701-612x612.jpg);
+    background-size: cover;
+    height: 99.5%;
+}
+
+@media screen and (min-width: 769px) 
+{    
+    .content {
+       max-width: 100%;
+        min-width: unset;
+    }
+    input[type="email"],
+    input[type="password"] {
+        max-width: 100%;
+        width: 90%;
+    }
+
+}
+
+     @media only screen and (max-width: 767px) {
+     
+     #logo {
+         margin: 10px auto;
+     }
+     
+     
+     .container {
+         width: 80%;
+         margin: 0 auto;
+     }
+     
+     
+     #check {
+         font-size: 14px;
+     }
+     
+     
+     h3 {
+         margin-top: 20px;
+     }
+     }
+
+
+
+ @media screen and (max-width: 768px) {
+    
+     .content {
+        max-width: 100%;
+         min-width: unset;
+     }
+     input[type="email"],
+     input[type="password"] {
+         max-width: 100%;
+         width: 90%;
+     }
+     .heading{
+     margin-left:-100px;
+ }
+ }
+
+
+ @media screen and (max-width: 480px) 
+ {
+    
+     .heading,
+     button {
+         font-size: 16px;
+     }
+     input[type="email"],
+     input[type="password"] {
+         max-width: 100%;
+     }
+     #logo {
+         text-align: center;
+     }
+     #logo img {
+         height: 50px;
+     }
+ .heading
+ {
+     margin-left:-100px;
+ }
+
+ }

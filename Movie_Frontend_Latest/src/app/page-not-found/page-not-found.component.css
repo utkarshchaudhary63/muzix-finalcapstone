@@ -1,0 +1,20 @@
+div{
+    /* border: 1px solid black; */
+    /* margin-top: ; */
+    width: fit-content;
+    margin: 200px auto;
+}
+
+button{
+    width: 241px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+h1{
+    font-size:xx-large;
+}
+h5{
+    font-size:x-large;
+}

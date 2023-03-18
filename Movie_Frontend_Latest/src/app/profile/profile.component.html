@@ -1,0 +1,51 @@
+<body>
+  <div class="container-fluid"> <app-header></app-header></div>
+ 
+         <div class="content">
+            <div class="container" *ngIf="show">
+              
+               <div class="heading">User details
+                <br>
+               <img mat-card-image src="{{users.profilePic}}" id="profilepic" alt="profile Photo" width="120px" height="120px" style="border-radius: 50%;"> 
+              </div>    
+               <div class="card-details">
+                      <div class="card-box">
+                      <span id="name" class="details">Name :- {{users.firstName}} {{users.lastName}} </span>
+                         
+                       </div>
+                       <br>
+                        <p id="gender" class="details">Gender :- {{users.gender}} </p> 
+                        <br>
+                        <p>         Age :- {{users.age}} </p>
+                    
+                      </div>
+
+                      <span *ngIf="amount==299" id="update" (click)="UpdateProfile()"><mat-icon>update</mat-icon></span>
+            <span  *ngIf="amount==299" id="delete"><mat-icon  (click)="Deleteuser()" style="margin-left: 5px;">delete</mat-icon></span>
+            
+            </div>
+           
+        </div>
+        <span>
+        <div *ngFor="let data of Users">
+          <div id="user" (click)=navigate(data.firstName)>
+              <img [src]="data.profilePic" width="80px" height="80px" style="border-radius: 50%; margin-top: -8px;" id="photo">
+              <div class="card-text">
+                  <h2>{{data.firstName}}</h2>  
+                  <h2>{{data.subscriptionPlan}}</h2>   
+              </div>
+            </div>
+          
+          
+          </div >
+         <span id="plus" (click)="adduser()"> <mat-icon> add_circle</mat-icon></span>
+           
+         
+     
+       
+      
+      </span>
+      
+      </body>
+
+  

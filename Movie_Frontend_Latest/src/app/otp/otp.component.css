@@ -1,0 +1,97 @@
+.otp-field input
+{
+font-size: 22px;
+padding: 10px;
+text-align: center;
+border: 2px solid gray;
+background: black;
+margin: 2px;
+border-radius: 5px;
+transition: all 0.1s;
+outline: none;
+font-weight: bold;
+
+}
+
+.otp-field
+{
+display: flex;
+cursor: pointer;
+margin-left: 50px;
+}
+
+.otp-field input:focus
+{
+border: 3px solid plum;
+box-shadow: 0 0 4px 4px purple;
+}
+
+input{
+    width: 50px;
+    height: 50px;
+    color:black;
+    margin-left: 10px;
+  background: transparent;
+  color: plum;
+  font-size: 30px;
+  padding: 15px;
+
+}
+
+input:hover{
+    border: 3px solid plum;
+    box-shadow: 0 0 4px 4px purple;
+    cursor: pointer;
+}
+#main
+{   margin:auto;
+    width: 370px;
+    height: 200px;
+    margin-top: 170px;
+    border: 1px solid white;
+    box-shadow: 3px 2px 3px 3px red;
+}
+
+#main:focus{
+border: 2px solid plum;
+box-shadow: 0 0 2px 2px purple;
+color: plum;
+}
+
+h1{
+    margin-left: 50px;
+    margin-top: 30px;  
+    font-size: xx-larger; 
+}
+.row{
+    margin-left: 12px;
+}
+
+form{
+    display: flex;
+}
+button{
+    margin-top: 25px;
+    background-color: #4070f4;
+    color: aliceblue;
+    font-size: 1rem;
+    border: none;
+    padding: 9px 0;
+    border-radius: 6px;
+    width: 30%;
+    font-size: 17px;
+    padding: 10px;
+    margin-left: 33%;
+    cursor: pointer;
+    transition: all 0.2 ease;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+
+    display: none;
+}
+
+button:hover{
+
+
+}

@@ -1,0 +1,26 @@
+<div id="main">
+<h1>ENTER  OTP </h1>
+<div>
+<div class="container">
+    <form class="row" [formGroup]="otpsubmit"  #txt1 (keyup)="move($event, '', txt1, txt2)">
+    <div class="col-md-2"> 
+        <input type="number"  maxlength="1" formControlName="one"  #txt2 (keyup)="move($event, txt1, txt2, txt3)" >
+    </div>
+    <div class="col-md-2"> 
+        <input type="number"  maxlength="1" formControlName="two" #txt3 (keyup)="move($event, txt2, txt3, txt4)">
+    </div>
+    <div class="col-md-2"> 
+        <input type="number"  maxlength="1" formControlName="three" #txt4 (keyup)="move($event, txt3, txt4, txt5)">
+    </div>
+    <div class="col-md-2"> 
+        <input type="number"  maxlength="1" formControlName="four"  #txt5 (keyup)="move($event, txt4, txt5, '') ">
+    </div>
+    <br>
+</form>
+<button type="submit" (click)="on()">Verify Otp</button>   
+</div>
+</div>
+</div>
+
+
+

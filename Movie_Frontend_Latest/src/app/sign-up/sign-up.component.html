@@ -1,0 +1,256 @@
+<body>
+  <h1><img routerLink="" id="logo" src="../../assets/Image20230215131915.png"></h1>
+
+  <form [formGroup]="registrationForm" novalidate (ngSubmit)="onSubmit()">
+
+    
+    
+    <mat-card class="registration-card">
+      <mat-card-header>
+        <!-- <mat-card-title>Registration Form </mat-card-title> -->
+      </mat-card-header>
+      <img routerLink="" id="logo" src="../../assets/Image20230215131915.png" height="18px" width="100px">
+     
+      <mat-card-content>
+      
+          <div *ngIf="userform;else addressForm">
+            <h2 style="color:plum;">Sign up</h2>
+            <div class="row" id="pic">
+              <div class="col-3">
+                <div id="uploadInput">
+                  <img id="profilephoto" [src]="url">
+                  <input type="file" id="file" (change)="uploadProfile($event)">
+                 
+                  <label for="file" id="uploadbtn">Choose Photo</label>
+               
+                </div>
+              </div>
+            </div>
+            
+              <div class="row">
+              <div class="col-6 ">
+                <mat-form-field class="full-width">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="firstName" formControlName="firstName" class="c1">
+                  <mat-error *ngIf="registrationForm.controls['firstName'].hasError('required')">
+                    First Name is <strong>required</strong>
+                  </mat-error>
+                  <mat-error *ngIf="registrationForm.controls['firstName'].hasError('minlength')">
+               First Name minimum 2 
+             </mat-error>
+                </mat-form-field>
+              </div>
+              
+              
+    
+              <div class="col-6 " id="last">
+                <mat-form-field class="full-width">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="lastName" formControlName="lastName" class="c1">
+                  <mat-error *ngIf="registrationForm.controls['lastName'].hasError('required')">
+                   Last name is <strong>required</strong>
+                  </mat-error>
+                  <mat-error
+                  *ngIf="registrationForm.get('lastName')?.errors?.['minlength']">
+                 last Name must minimum 2</mat-error>
+            
+            
+                </mat-form-field>
+              </div>
+            </div>
+      
+    
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <!-- <mat-label>Mobile Number</mat-label> -->
+                  <mat-icon style="color: grey;">call</mat-icon>
+                  <input id="mob"type="number" matInput placeholder="Mobile No" formControlName="mobileNo" matSuffix
+                  style="margin-right: 400px;">
+                
+
+                  <mat-error *ngIf="registrationForm.controls['mobileNo'].hasError('required')">
+                    Mobile number is <strong>required</strong>
+                  </mat-error>
+                  <mat-error *ngIf="mobileNo?.errors?.['pattern']">
+                   Enter Valid Mobile Number must be start with 9/8/7/6 and minimum Length 10
+                </mat-error>  
+                </mat-form-field>
+              </div>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput placeholder="Email" formControlName="email">
+  
+                  <button  matSuffix   mat-button color="accent" (click)="otppage()" [disabled]="otpButtonDisabled || !email?.valid" mat-raised-button id="nextbtn" appOtp> {{ otpButtonDisabled ? 'Please wait 2 min...' : 'Send OTP' }}</button>
+  
+                  <mat-error *ngIf="registrationForm.controls['email'].hasError('required')">
+                    Email id is <strong>required</strong>
+                  </mat-error><mat-error
+                  *ngIf="registrationForm.get('email')?.errors?.['email']">
+                  Email must contain @ and .</mat-error> 
+                <mat-error *ngIf="email?.errors?.['invalidEmail']">
+              Enter a  valid email address
+               </mat-error> 
+                </mat-form-field>
+               
+              </div>
+              
+            </div>
+          </div>
+    
+  
+          <div id="main" *ngIf="openotp">
+            <div *ngIf="otpButtonDisabled && resendTimeout >= 0" style="font-size:15px ;font-weight: lighter;">
+              Resend in<span class="resend-message"> {{ formatTime(resendTimeout) }}</span> 
+              </div>
+            <h3 style="color: black;">ENTER OTP </h3>
+            
+            <div class="container">
+                <form class="row" [formGroup]="otpsubmit"  #txt1 (keyup)="move($event, '', txt1, txt2)">
+                <div class="col-md-2"> 
+                    <input type="number"  maxlength="1" formControlName="one"  #txt2 (keyup)="move($event, txt1, txt2, txt3)" >
+                </div>
+                <div class="col-md-2"> 
+                    <input type="number"  maxlength="1" formControlName="two" #txt3 (keyup)="move($event, txt2, txt3, txt4)">
+                </div>
+                <div class="col-md-2"> 
+                    <input type="number"  maxlength="1" formControlName="three" #txt4 (keyup)="move($event, txt3, txt4, txt5)">
+                </div>
+                <div class="col-md-2"> 
+                    <input type="number"  maxlength="1" formControlName="four"  #txt5 (keyup)="move($event, txt4, txt5, '') ">
+                </div>
+                <br>
+            </form>
+            <button type="submit" (click)="onverifyotp()" appOtp>Verify Otp</button>   
+            </div>
+           
+            </div>
+            
+    
+  
+  
+  
+  
+     <ng-template #addressForm>
+    
+            <div *ngIf="address ; else passwordfield">
+              <h2>Extra details</h2>
+              <div class="row">
+                <mat-form-field class="full-width">
+                  <mat-label>Age</mat-label>
+                  <input type="number" matInput placeholder="age" formControlName="age">
+                  <mat-error *ngIf="registrationForm.controls['age'].hasError('required')">
+                    Age is <strong>required</strong>
+                  </mat-error>
+   
+                  <mat-error
+                  *ngIf="registrationForm.get('age')?.errors?.['min']">
+              Age must be above 5 yrs</mat-error>
+            
+                </mat-form-field>
+              </div>
+    
+              <div class="row">
+                <div class="col">
+                  <mat-form-field class="full-width">
+                    <mat-label>gender</mat-label>
+                    <mat-select placeholder="Gender" formControlName="gender">
+                      <mat-option *ngFor="let gender of gen" [value]="gender">
+                        {{ gender }}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="registrationForm.controls['gender'].hasError('required')">
+                      gender is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+                <div class="col">
+                  <mat-form-field class="full-width">
+                    <mat-label>State</mat-label>
+                    <mat-select placeholder="State" formControlName="state">
+                      <mat-option *ngFor="let state of states" [value]="state">
+                        {{ state }}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="registrationForm.controls['state'].hasError('required')">
+                      State is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+          </ng-template> 
+          
+          <ng-template #passwordfield>
+            <h2>Set Password</h2>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-label>password</mat-label>
+                  <input type="password" matInput placeholder="Password" formControlName="password">
+                  <mat-error *ngIf="registrationForm.controls['password'].hasError('required')">
+                    Password is <strong>required</strong>
+                  </mat-error>
+                  <mat-error *ngIf="registrationForm.controls['password'].hasError('pattern')">
+                    Password must be of 5 characters and atleast one special and numeric <strong>required</strong>
+                  </mat-error>
+  
+                  <mat-error *ngIf="password?.hasError('invalidPassword')">
+                    <strong>Invalid</strong> password !!
+                  </mat-error>
+                 
+                </mat-form-field>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-label>confirm password</mat-label>
+                  <input type="password" matInput placeholder="Confirm Password" formControlName="confirmPassword">
+                  <mat-error *ngIf="confirmPassword?.hasError('required')">
+                    Confirm Password is <strong>required</strong>
+                  </mat-error>
+    
+                </mat-form-field>
+                <mat-error *ngIf="registrationForm.hasError('passwordMisMatch')">
+                  Password <strong>MisMatch</strong>..Please enter same password
+                </mat-error>
+              </div>
+            </div>
+          </ng-template>
+    
+        </mat-card-content>
+        <mat-card-actions  id="next" >
+          <button type="button" *ngIf="!userform" mat-raised-button color="warn" (click)="prevbtn()">Previous</button>
+    
+          <button *ngIf="register" mat-raised-button color="warn" ng-click type="submit"
+            class="bg-success" [disabled]="registrationForm.invalid">Register</button>
+         
+            <div *ngIf="showNext"> 
+              <button  *ngIf="!register  " [disabled]="" type="button" mat-raised-button color="accent" id="nextbtn" (click)="nextForm()">Next</button>
+            </div>
+    
+        </mat-card-actions>
+        
+        <div id="login">
+          <span style="color: white;font-size: 16px;font-weight: 250;">Already registered? </span><a routerLink="/login" style="color: blue;"> Login</a>
+    
+        </div>
+    
+      </mat-card>
+
+      <div style="height:10%;background-color: blue;">
+
+      </div>
+    </form>
+    <div style="background-color: rgb(55, 154, 215);">
+
+    </div>
+    </body >
+   

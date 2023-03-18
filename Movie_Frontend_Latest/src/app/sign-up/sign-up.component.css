@@ -1,0 +1,387 @@
+.full-width {
+    width: 100%;
+  
+  }
+  
+  h2{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    color: black;
+}
+  
+  .registration-card {
+    width: 500px;
+    margin: 20px auto;
+    padding: 5px;
+    margin-right: 4%;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    height: 100%;
+  }
+  
+
+  .row{
+    line-height: 0px;
+  }
+  
+  
+  mat-card-header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 0px;
+  }
+  
+  .mat-radio-button {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  #profilephoto{
+box-shadow: 5px 10px 10px rgba(38, 36, 36, 0.3);
+    cursor: pointer;
+    background-size: 90px;
+    height: 100%;
+    width: 100%;
+     
+  }
+  
+  #uploadInput:hover #uploadbtn{
+    opacity: 1;
+  }
+  
+  #uploadbtn{
+    padding: 10px 0px 20px 0px;
+    opacity: 0;
+    width: 100px;
+    height: fit-content;
+    
+    
+    position: absolute;
+    bottom: -3px;
+    left: 1%;
+    background-color: rgba(0,0,0,0.8);
+    color: red;
+    font-size: 9px;
+    text-align: center;
+    cursor: pointer;
+    
+  }
+  
+  #uploadInput{
+    border: 1px solid gray;
+    height: 100px;
+    width: 100px;
+    position:relative;
+    top:-20px;
+    left: 2px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  #file{
+    display: none;
+  }
+  
+  #profilephoto:hover {
+    box-shadow: 0px 2px 15px 10px rgba(255, 129, 129, 0.3);
+  
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+  }
+  
+  .col {
+    flex: 1;
+    margin-right: 20px;
+    
+    
+  }
+  
+  .col:last-child {
+    margin-right: 0;
+  }
+  
+  mat-card-actions{
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+  
+  }
+  mat-card-actions button{
+    width: 100px;
+  }
+ 
+  a{
+    text-decoration: none;
+    color: rgb(64, 7, 64);
+    font-weight:500;
+    font-size:19px
+  }
+  
+  form{
+   
+    background-position-y: -300px;
+   padding-bottom: 0x;
+
+  }
+  .c1{
+    width: 70px;
+  }
+  h1{
+    font-family: Aclonica;
+    font-size: 230%;
+    color: rgb(247, 78, 78);
+    align-self: center;
+    align-items: center;
+    align-content: center;
+   
+  }
+  #applogo{
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+
+    width: 16%;
+    height: 12%;
+    opacity: 0.8;
+
+  }
+  
+  input.mat-input-element {height:10px}
+  mat-label{
+    font-size: small;
+    color: blueviolet;
+    
+    
+  }
+  mat-form-field{
+    font-size: small;
+    border-color: red;
+    
+    
+  }
+  
+  #next{
+    margin-top: -10px;
+    display: flex ;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+   }
+  
+  .registration-card{
+   background:transparent;
+   margin:auto;
+   box-shadow: 8px 8px 8px 8px black;
+ margin-top: -15px;
+   
+  }
+  #last{
+    padding-left: 12px;
+  }
+  #pic{
+    padding-top: 20px;
+    margin-left: 160px;
+  }
+  body ,aaa{
+ 
+  background-image: url(../../assets/signuplogin/yy.jpg);
+opacity: 0.;
+  background-size: cover;
+  height: 100vh;
+ }
+ #logo{
+  margin-left: 10px;
+}
+
+#mob::-webkit-outer-spin-button,#mob::-webkit-inner-spin-button{
+
+    display: none;
+}
+
+
+/*================================*/
+
+
+.otp-field input
+{
+font-size: 22px;
+padding: 10px;
+text-align: center;
+border: 2px solid gray;
+background: black;
+margin: 2px;
+border-radius: 5px;
+transition: all 0.1s;
+outline: none;
+font-weight: bold;
+
+}
+
+.otp-field
+{
+display: flex;
+cursor: pointer;
+margin-left: 50px;
+}
+
+.otp-field input:focus
+{
+border: 3px solid plum;
+box-shadow: 0 0 4px 4px purple;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+
+  display: none;
+}
+
+h3{
+  margin: auto;
+  font-weight:bold;
+  font-size:20px;
+  margin-left:30%;
+ 
+  color:plum;
+}
+#main
+{
+margin-top:8px;
+}
+
+ .container{
+  margin-top:15px;
+  margin-left:35px
+}
+
+
+#main button{
+  margin-top: 10px;
+  background-color: rgb(157, 17, 157);
+  color: aliceblue;
+  font-size: 1rem;
+  border: none;
+  padding: 9px 0;
+  border-radius: 6px;
+  width: 30%;
+  font-size: 17px;
+  padding: 10px;
+  margin-left: 25%;
+  cursor: pointer;
+  transition: all 0.2 ease;
+}
+
+#main input{
+  width: 35px;
+  height: 35px;
+  color:black;
+  margin-left: 4px;
+background: transparent;
+color: whitesmoke;
+font-size: 20px;
+font-weight:bolder;
+/* padding: 15px; */
+
+}
+
+#main input:hover{
+  border: 3px solid plum;
+  box-shadow: 0 0 4px 4px purple;
+  cursor: pointer;
+}
+
+
+
+#logo{
+margin-left: 2px;
+}
+
+#logo1{
+  margin-left: 2px;
+}
+#main .row{
+  margin-left: 25px;
+}
+
+#login{
+  text-align: center;
+  color: rgb(239, 153, 239);
+  position: relative;
+  margin-top:-25px;
+  
+}
+form{
+  margin-left: 57%;
+  padding-top: 0%;}
+
+  .resend-message{
+    color: red;
+    font-size: 15px;
+  }
+
+mat-error{
+  color: rgb(239, 9, 9);
+  /* background-color: red; */
+  font-weight: 400;
+  font-size: 15px;
+}
+
+
+
+  /* //-------------------------------------------------------------------- */
+
+
+  
+ @media screen and (max-width: 768px) {
+    
+  form{
+    margin-left: 17%;
+    padding-top: 1%;}
+}
+
+
+@media screen and (max-width: 480px) 
+{
+ 
+  .heading,
+  button {
+      font-size: 16px;
+  }
+  input[type="email"],
+  input[type="password"] {
+      max-width: 100%;
+  }
+  #logo {
+      text-align: center;
+  }
+  #logo img {
+      height: 50px;
+  }
+.heading
+{
+  margin-left:-100px;
+}
+
+form{
+  margin-left: 7%;
+  padding-top: 1%;}
+
+}

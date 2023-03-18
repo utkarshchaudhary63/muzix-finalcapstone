@@ -1,0 +1,238 @@
+
+img{
+    width: 100%;
+    min-height: fit-content;
+}
+
+
+.banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+}
+
+.overlay
+{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,7),(rgba(0,0,0.7)));
+    top: 0;
+}
+
+
+.content{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%,50%); */
+    text-align: center;
+    position: relative;
+    margin-top: 500px;
+    margin-left: -95%;
+}
+
+.content h1{
+font-size: 50px;
+    line-height: 60px;
+    font-weight: 600;
+/* max-width: 650px;  */
+margin-top: -270px;
+color: white;
+}
+
+.content p{
+font-weight: 400;
+font-size: 19px;
+color:white;
+margin-top: 50px;
+
+}
+
+
+.content h3{
+    font-weight: 400;
+margin-bottom: 3px;
+font-size: 25px;
+margin-top: 50px/4;
+color: white;
+}
+
+.emailSignup input{
+    border: 0;
+    outline: 0;
+    margin-left: 20px/4;
+    height: 50px;
+    width: 410px;
+    margin-top: -250px;
+    margin-right:50px/4;
+    background: transparent;
+    border: 2px solid white;
+    margin-left: 4px;
+}
+
+.emailSignup :placeholder-shown{
+    font-size: 20px;
+    padding-left: 75px/4;
+  
+}
+
+.emailSignup button{
+
+    background: red;
+    color:white;
+    font-size: 3px;
+    cursor: pointer;
+    padding: 12px 12px 12px 12px ;
+    border-radius: 5px;
+    width: 161px;
+    height: 54px;
+
+    margin-top: 50px;}
+    
+/* p{
+    font-size: 18px;
+    margin-top: 50px;
+    color:white;
+} */
+
+#sub{
+    position: relative;
+    font-size: 20px;
+}
+
+
+img{
+
+    background-blend-mode: darken;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+    filter:brightness(38.25%);
+
+}
+#arr{
+    font-size: 27px;
+}
+
+hr{
+    background-color: rgb(32, 28, 28);
+    width: 100%;
+}
+
+/*-----------------------------------------------------*/
+@media screen and (max-width: 769px) 
+{    
+    .content{
+        margin-left: -45%;
+    }
+    
+    .content h1{
+    font-size: 25px;
+        line-height: 30px;
+        font-weight: 200;
+    /* max-width: 650px;  */
+    margin-top: -270px;
+    color: white;
+    }
+    
+    .content p{
+    font-weight: 200;
+    font-size: 15px;
+    color:white;
+    margin-top: 50px;
+    
+    }
+    
+    
+    .content h3{
+        font-weight: 250;
+    margin-bottom: 3px;
+    font-size: 25px;
+    margin-top: 50px/4;
+    color: white;
+    }
+    
+
+}
+
+     @media only screen and (max-width: 480px) {
+     
+        .content{
+            margin-left: -85%;
+            flex-wrap: wrap;
+        }
+        
+        .content h1{
+            font-size: 25px;
+                line-height: 30px;
+                font-weight: 200;
+            /* max-width: 650px;  */
+            margin-top: -270px;
+            color: white;
+            }
+            
+            .content p{
+            font-weight: 200;
+            font-size: 19px;
+            color:white;
+            margin-top: 50px;
+            
+            }
+            
+            
+            .content h3{
+                font-weight: 200;
+            margin-bottom: 3px;
+            font-size: 25px;
+            margin-top: 50px/4;
+            color: white;
+            }
+    }
+
+ /* @media screen and (max-width: 768px) {
+    
+     .content {
+        max-width: 100%;
+         min-width: unset;
+     }
+     input[type="email"],
+     input[type="password"] {
+         max-width: 100%;
+         width: 90%;
+     }
+     .heading{
+     margin-left:-100px;
+ }
+ }
+
+
+ @media screen and (max-width: 480px) 
+ {
+    
+     .heading,
+     button {
+         font-size: 16px;
+     }
+     input[type="email"],
+     input[type="password"] {
+         max-width: 100%;
+     }
+     #logo {
+         text-align: center;
+     }
+     #logo img {
+         height: 50px;
+     }
+ .heading
+ {
+     margin-left:-100px;
+ }
+
+ } */

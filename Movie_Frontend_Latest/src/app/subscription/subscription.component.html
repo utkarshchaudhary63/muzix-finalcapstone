@@ -1,0 +1,47 @@
+<div> 
+<app-header></app-header>
+</div>
+
+<!-- ---------------------------------------------------------------------------- --> 
+
+
+<body>
+   
+
+    <div id="main">
+        <h2 style="color: plum;"><mat-icon style="color: gold">star</mat-icon><mat-icon style="color: gold">star</mat-icon><mat-icon style="color: gold">star</mat-icon>Our Subscription Plans</h2>
+        <label>
+            <span><button name="plans" id="Silver"   (click)="payment(149)">Silver: @149/month <mat-icon>live_tv</mat-icon><h3>You can enjoy watching any movies </h3></button> </span>
+        
+        </label>
+
+        <label>
+            <span><button name="plans" id="Gold"   (click)="payment(199)">Gold: @199/month
+                <mat-icon>live_tv</mat-icon><mat-icon style="color: rgb(205, 27, 116)">favorite</mat-icon> <h3>Silver + add movies to your  favourite list </h3></button> </span>
+          
+        </label>
+
+        <label>
+     
+            <span><button name="plans" id="Platinum"   (click)="payment(299)">Platinum: @299/month <mat-icon>live_tv</mat-icon>
+              <mat-icon style="color: rgb(205, 27, 116)">favorite</mat-icon> <mat-icon>person_add</mat-icon><i>
+                     <h3>Gold+ can enjoy making multiple profile </h3></i>  </button> </span>
+        </label>
+
+            <label>
+         
+            <button type="submit"  id="sub"  (click)="updateamount()">Subscribe</button>
+
+
+            <button type="submit" *ngIf="Amount!=0" id="unsub"  (click)="Unsubscribe()">Unsubscribe</button>
+        </label>
+        
+</div>
+
+<div id="gif">
+
+    <!-- <img src="../../assets/gif/subscri.gif" alt=""> -->
+    <img src="../../assets/gif/sub44.gif" alt="">
+</div>
+
+</body>
